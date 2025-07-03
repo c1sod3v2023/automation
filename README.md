@@ -13,28 +13,50 @@ This project automates the login process for the [SLMIS platform](https://slmis.
 
 Before running this script, make sure you have the following installed:
 
-- Python 3.x
-- Chrome WebDriver (Make sure you download the correct version based on your Chrome version)
-- Chrome driver is attached in the file already, change directory referencing based on your directory
+- **Python 3.x**: Download and install Python from [here](https://www.python.org/downloads/).
+- **Chrome WebDriver**: Ensure you have the correct version of Chrome WebDriver matching your installed Chrome version. You can download it from [here](https://sites.google.com/a/chromium.org/chromedriver/).
+  
+  *Once downloaded, extract the WebDriver and ensure the path is referenced correctly in the script. The script includes a default path, but you can change it according to your system.*
 
-### Required Python Libraries
+### Setting up Dependencies
 
+To run this script, you need to install some required Python libraries. You can do this easily by following the steps below:
 
+### Installing Python Libraries
 
-You will need to install the following Python packages:
+1. **Install Python**:
+   - Download and install Python from the official website: [https://www.python.org/downloads/](https://www.python.org/downloads/).
+   - Make sure to check the box that says **Add Python to PATH** during installation.
 
-- `selenium`
-- `getpass`
-- `json`
+2. **Install the required Python packages**:
 
-To install the necessary libraries, run the following command in your terminal:
+   In your terminal (Command Prompt on Windows, Terminal on macOS/Linux), run the following command to install all required dependencies:
 
-### Optional
-```bash
-pip install pyinstaller
+   ```bash
+   pip install selenium pyinstaller
 
-```bash
-pip install -r requirements.txt
+   pip install -r requirements.txt
 
-run python login.py or py login.py
+   python login.py
 
+   python matriculate.py
+
+   python account_creation.py
+
+---
+
+### Key Sections in the README:
+
+1. **Installation of Python & Chrome WebDriver**: The installation steps for Python and Chrome WebDriver are clearly described, along with where to download them.
+   
+2. **Installing Dependencies**: Instructions for installing Python dependencies (`selenium`, `pyinstaller`) with both a single command and using a `requirements.txt` file.
+
+3. **Running the Script**: A clear explanation of how to run the Python script after setting everything up.
+
+4. **Optional Executable Generation**: Instructions for converting the script into a standalone `.exe` file using PyInstaller.
+
+5. **Troubleshooting**: A brief troubleshooting section to help users resolve common issues like mismatched Chrome WebDriver versions and problems with PyInstaller.
+
+---
+
+With this complete README, users can easily set up the environment, run the script, or even convert it into an executable without needing to install Python or dependencies themselves.
