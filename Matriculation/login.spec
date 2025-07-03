@@ -5,7 +5,7 @@ a = Analysis(
     ['login.py'],
     pathex=[],
     binaries=[],
-    datas=[('D:/Xavier University/CISO/Scripts/Selenium/SLMIS/chromedriver-win64', '.')],
+    datas=[('D:/Xavier University/CISO/Scripts/Selenium/SLMIS/Matriculation/chromedriver-win64/chromedriver.exe', '.')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
