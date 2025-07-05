@@ -202,6 +202,25 @@ for emplid in pbar:
                 EC.presence_of_element_located((By.ID, "PSUSRPRFL_WRK_DESCR"))
             ).text.strip()
 
+            # Check if the popupText warning about lowercase exists
+            try:
+                popup = driver.find_element(By.XPATH, "//span[@class='popupText' and contains(., 'lower case alphabets')]")
+                if popup.is_displayed():
+                    print("⚠️ Password policy popup found — regenerating password...")
+                    generate_btn = WebDriverWait(driver, 10).until(
+                        EC.element_to_be_clickable((By.ID, "PSOPRDEFN_OPRTYPE"))
+                    )
+                    generate_btn.click()
+                    time.sleep(2)
+                    generated_password = WebDriverWait(driver, 10).until(
+                        EC.presence_of_element_located((By.ID, "PSUSRPRFL_WRK_DESCR"))
+                    ).text.strip()
+                    print(f"✅ New password after regeneration: {generated_password}")
+                else:
+                    print(f"✅ New password: {generated_password}")
+            except Exception:
+                print(f"✅ New password: {generated_password}")
+
             # === Final Save ===
             save_btn = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable((By.ID, "#ICSave"))
